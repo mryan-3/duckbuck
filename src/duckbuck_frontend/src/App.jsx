@@ -1,31 +1,18 @@
-import { useState } from 'react';
-import { duckbuck_backend } from 'declarations/duckbuck_backend';
-
+import { Button } from './components/ui/button'
 function App() {
-  const [greeting, setGreeting] = useState('');
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    duckbuck_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
+    return (
+        <main>
+            <img src="/logo2.svg" alt="DFINITY logo" />
+            <br />
+            <br />
+            <label htmlFor="name" className="font-bold">Enter your name: &nbsp;</label>
+            <input id="name" alt="Name" type="text" />
+            <Button className='mt-6' type="submit">hello world city
 
-  return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
-  );
+            </Button>
+        </main>
+    );
 }
 
 export default App;
