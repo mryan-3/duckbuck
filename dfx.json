@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "duckbuck_backend": {
+      "main": "src/duckbuck_backend/main.mo",
+      "type": "motoko"
+    },
+    "duckbuck_frontend": {
+      "dependencies": [
+        "duckbuck_backend"
+      ],
+      "source": [
+        "src/duckbuck_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "duckbuck_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
