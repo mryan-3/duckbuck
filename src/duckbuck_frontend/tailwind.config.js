@@ -21,6 +21,10 @@ module.exports = {
 				ducky: ['ABeeZee', 'sans-serif'],
 				sans: ['Inter', 'sans-serif']
 			},
+            screens: {
+                xl: '1400px',
+                '2xl': '1600px'
+            },
 			colors: {
 				ducky: '#2a0f66',
 				border: 'hsl(var(--border))',
@@ -80,3 +84,4 @@ module.exports = {
 	},
 	plugins: [require('tailwindcss-animate')]
 }
+
