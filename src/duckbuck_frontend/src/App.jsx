@@ -2,6 +2,7 @@ import { PieChart } from 'react-minimal-pie-chart'
 import Footer from './components/layout/footer'
 import DistCard from './components/cards/dist-card'
 import { Chrono } from "react-chrono-extra";
+import { Fade, Bounce, Slide } from "react-awesome-reveal";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                             <span className='border-b-8 border-purple-600 bg-gradient-to-r from-purple-300 from-10% to-purple-500 bg-clip-text leading-[1.5] text-transparent underline underline-offset-4'>
                                 Meme
                             </span>{' '}
-                            with DeFi Utility
+                            with<br className='md:hidden' /> DeFi Utility
                         </h1>
                         <p className='lg:mx-w-none mx-auto -mt-4 max-w-xl text-center text-xl md:font-semibold lg:mx-0 lg:text-start'>
                             Start your meme journey with the Ducky Duck. A
@@ -32,15 +33,17 @@ function App() {
                         </button>
                     </div>
 
-                    <div className='h-fit overflow-clip lg:-mt-24'>
-                        <img
-                            src='/duckbuck-nobg.png'
-                            alt='logo'
-                            width={512}
-                            height={512}
-                            className='mx-auto w-[1000px]'
-                        />{' '}
-                    </div>
+                    <Bounce>
+                        <div className='h-fit overflow-clip lg:-mt-24'>
+                            <img
+                                src='/duckbuck-nobg.png'
+                                alt='logo'
+                                width={512}
+                                height={512}
+                                className='mx-auto w-[1000px]'
+                            />{' '}
+                        </div>
+                    </Bounce>
                 </section>
             </div>
 
@@ -55,15 +58,18 @@ function App() {
                         Buy $DBUCK
                     </button>
 
-                    <div className='block mt-8'>
-                        <img
-                            src='/duckbuck2.jpg'
-                            alt='logo'
-                            width={512}
-                            height={512}
-                            className='w-[500px] rounded-full bg-ducky/50 shadow-lg'
-                        />
-                    </div>
+
+                    <Bounce>
+                        <div className='block mt-8'>
+                            <img
+                                src='/duckbuck2.jpg'
+                                alt='logo'
+                                width={512}
+                                height={512}
+                                className='w-[500px] rounded-full bg-ducky/50 shadow-lg'
+                            />
+                        </div>
+                    </Bounce>
                 </div>
             </div>
 
@@ -114,11 +120,11 @@ const About = () => {
 const Tokenomics = () => {
     return (
         <div className='mt-32 md:mt-52 flex flex-col items-center p-4 justify-center md:gap-8 bg-ducky/50 py-32 md:px-56'>
-            <div>
+            <Fade direction='down'>
                 <h1 className='font-ducky text-5xl font-bold md:text-7xl lg:text-8xl'>
                     Tokenomics
                 </h1>
-            </div>
+            </Fade>
 
             <div className='mt-12 flex flex-col-reverse md:flex-row items-center gap-12'>
                 <div>
@@ -237,10 +243,13 @@ const Roadmap = () => {
         <div className='pt-24 md:pt-0 md:mt-52 flex flex-col items-center justify-center gap-8 md:px-56'>
 
             <div>
-                <h1 className='font-ducky text-5xl text-center md:text-start font-bold md:text-7xl lg:text-8xl'>
-                    Ducky's Roadmap
-                </h1>
+                <Fade direction='down'>
+                    <h1 className='font-ducky text-5xl text-center md:text-start font-bold md:text-7xl lg:text-8xl'>
+                        Ducky's Roadmap
+                    </h1>
+                </Fade>
             </div>
+
             <img
                 src='/duckbuck5.jpg'
                 alt='logo'
@@ -276,76 +285,90 @@ const AirdropMech = () => {
 
         <div className='mt-24 md:mt-52 flex flex-col items-center justify-center gap-8 bg-ducky/50 py-32 md:px-56'>
             <div>
-                <h1 className='font-ducky text-5xl text-center md:text-start font-bold md:text-7xl lg:text-8xl'>
-                    AirDrop Mechanism
-                </h1>
+                <Fade direction='down' duration={500}>
+                    <h1 className='font-ducky text-5xl text-center md:text-start font-bold md:text-7xl lg:text-8xl'>
+                        AirDrop Mechanism
+                    </h1>
+                </Fade>
             </div>
 
             <div className='pt-8'>
 
-                <div className='flex flex-col md:flex-row items-center gap-8'>
-                    <div className='text-8xl border-2 border-dashed border-purple-600 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>1 </div>
-                    <div className='border-y px-8 py-12 border-purple-900'>
-                        <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Eligibility</h2>
-                        <p className='mt-3 max-w-xl text-center md:text-start '>
+                <Slide direction='right' duration={500}>
+                    <div className='flex flex-col md:flex-row items-center gap-8'>
+                        <div className='text-8xl border-2 border-dashed border-purple-600 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>1 </div>
+                        <div className='border-y px-8 py-12 border-purple-900'>
+                            <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Eligibility</h2>
+                            <p className='mt-3 max-w-xl text-center md:text-start '>
 
-                            Users must hold a minimum amount of a major cryptocurrency (e.g., ETH, BTC, BNB) to be eligible.
-                            Follow DuckBuck on social media platforms (Twitter, Telegram, Discord).
-                            Complete a simple task such as retweeting a specific post or joining the community chat.
-                        </p>
+                                Users must hold a minimum amount of a major cryptocurrency (e.g., ETH, BTC, BNB) to be eligible.
+                                Follow DuckBuck on social media platforms (Twitter, Telegram, Discord).
+                                Complete a simple task such as retweeting a specific post or joining the community chat.
+                            </p>
 
+                        </div>
                     </div>
-                </div>
+                </Slide>
 
-                <div className='flex flex-col pt-8 md:pt-0 md:flex-row items-center gap-8'>
-                    <div className='text-8xl bg-purple-500/20 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>2</div>
-                    <div className='border-b px-8 py-12 border-purple-900'>
-                        <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Registration</h2>
-                        <p className='mt-3 max-w-xl text-center md:text-start'>
-                            Users will sign up on the official DuckBuck website with their wallet address and social media handles.
-                            Verification of task completion through integration with social media APIs.
-                        </p>
+                <Slide direction='right' duration={500}>
+                    <div className='flex flex-col pt-8 md:pt-0 md:flex-row items-center gap-8'>
+                        <div className='text-8xl bg-purple-500/20 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>2</div>
+                        <div className='border-b px-8 py-12 border-purple-900'>
+                            <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Registration</h2>
+                            <p className='mt-3 max-w-xl text-center md:text-start'>
+                                Users will sign up on the official DuckBuck website with their wallet address and social media handles.
+                                Verification of task completion through integration with social media APIs.
+                            </p>
 
+                        </div>
                     </div>
-                </div>
+                </Slide>
 
-                <div className='flex flex-col md:flex-row items-center pt-8 md:pt-0 gap-8'>
-                    <div className='text-8xl border-2 border-dashed border-purple-600 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>3</div>
-                    <div className='border-b px-8 py-12 border-purple-900'>
-                        <h2 className='font-ducky text-lg font-bold text-center md:text-start md:text-xl lg:text-2xl'>Distribution</h2>
-                        <p className='mt-3 max-w-xl text-center md:text-start'>
-                            The airdrop will distribute 200,000,000 DBUCK tokens over a period of 3 months.
-                            Tokens will be distributed in three phases: 40% in the first month, 35% in the second month, and 25% in the third month.
-                            Airdrop amounts will vary based on the user's engagement level and task completion.
-                        </p>
 
+                <Slide direction='left' duration={500}>
+                    <div className='flex flex-col md:flex-row items-center pt-8 md:pt-0 gap-8'>
+                        <div className='text-8xl border-2 border-dashed border-purple-600 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>3</div>
+                        <div className='border-b px-8 py-12 border-purple-900'>
+                            <h2 className='font-ducky text-lg font-bold text-center md:text-start md:text-xl lg:text-2xl'>Distribution</h2>
+                            <p className='mt-3 max-w-xl text-center md:text-start'>
+                                The airdrop will distribute 200,000,000 DBUCK tokens over a period of 3 months.
+                                Tokens will be distributed in three phases: 40% in the first month, 35% in the second month, and 25% in the third month.
+                                Airdrop amounts will vary based on the user's engagement level and task completion.
+                            </p>
+
+                        </div>
                     </div>
-                </div>
+                </Slide>
 
 
-                <div className='flex flex-col md:flex-row pt-8 md:pt-0 items-center gap-8'>
-                    <div className='text-8xl bg-purple-500/20 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>4</div>
-                    <div className='border-b px-8 py-12 border-purple-900'>
-                        <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Anti-Sybil Measures</h2>
-                        <p className='mt-3 max-w-xl text-center md:text-start'>
-                            Multi-account prevention through KYC (optional) or advanced algorithms to detect and block fake accounts.
-                            Regular audits and community feedback to ensure fair distribution.
-                        </p>
+                <Slide direction='right' duration={500}>
+                    <div className='flex flex-col md:flex-row pt-8 md:pt-0 items-center gap-8'>
+                        <div className='text-8xl bg-purple-500/20 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>4</div>
+                        <div className='border-b px-8 py-12 border-purple-900'>
+                            <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Anti-Sybil Measures</h2>
+                            <p className='mt-3 max-w-xl text-center md:text-start'>
+                                Multi-account prevention through KYC (optional) or advanced algorithms to detect and block fake accounts.
+                                Regular audits and community feedback to ensure fair distribution.
+                            </p>
 
+                        </div>
                     </div>
-                </div>
+                </Slide>
 
-                <div className='flex flex-col md:flex-row items-center pt-8 md:pt-0 gap-8'>
-                    <div className='text-8xl border-2 border-dashed border-purple-600 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>5</div>
-                    <div className='border-b px-8 py-12 border-purple-900'>
-                        <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Bonus Airdrops</h2>
-                        <p className='mt-3 max-w-xl text-center md:text-start'>
-                            Additional tokens for users who refer others to the DuckBuck community.
-                            Special bonuses for long-term holders and active participants in governance.
-                        </p>
 
+                <Slide direction='left' duration={500}>
+                    <div className='flex flex-col md:flex-row items-center pt-8 md:pt-0 gap-8'>
+                        <div className='text-8xl border-2 border-dashed border-purple-600 text-purple-500 flex items-center justify-center  h-32 w-32 p-4 rounded-full font-semibold'>5</div>
+                        <div className='border-b px-8 py-12 border-purple-900'>
+                            <h2 className='font-ducky text-lg font-bold md:text-xl lg:text-2xl text-center md:text-start'>Bonus Airdrops</h2>
+                            <p className='mt-3 max-w-xl text-center md:text-start'>
+                                Additional tokens for users who refer others to the DuckBuck community.
+                                Special bonuses for long-term holders and active participants in governance.
+                            </p>
+
+                        </div>
                     </div>
-                </div>
+                </Slide>
 
             </div>
         </div>
