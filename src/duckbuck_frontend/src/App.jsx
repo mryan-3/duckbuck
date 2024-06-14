@@ -7,7 +7,7 @@ import { Fade, Bounce, Rotate } from 'react-awesome-reveal'
 function App() {
     return (
         <div className='h-screen'>
-            <div className='-mt-4 min-h-screen bg-[url(/duckbuck7.jpg)] bg-cover bg-center bg-no-repeat pt-24 lg:pt-64'>
+            <div className='-mt-4 min-h-screen bg-[url(/duckbuck7.jpg)] bg-cover bg-center bg-no-repeat pt-24 md:pt-52 lg:pt-64'>
                 <div className='absolute inset-0 z-20 h-full w-full bg-ducky/60' />
 
                 <section className='relative z-30 mx-auto flex flex-col gap-4 px-4 antialiased lg:mx-20 lg:flex-row-reverse lg:pl-20'>
@@ -85,27 +85,27 @@ export default App
 // About us
 const About = () => {
     return (
-        <div className='flex flex-col items-start justify-center px-4 md:flex-row md:gap-20 md:px-56'>
-            <div className='flex w-full flex-col items-center md:w-fit'>
+        <div className='flex flex-col items-start justify-center px-4 lg:flex-row lg:gap-20 lg:px-56'>
+            <div className='flex w-full flex-col items-center lg:w-fit'>
                 <div className='mx-auto flex w-full items-center justify-center'>
                     <img
                         src='/duckbuck2.jpg'
                         alt='logo'
                         width={512}
                         height={512}
-                        className='mx-auto -mt-20 w-[250px] rounded-full bg-ducky/50 shadow-lg md:w-[500px]'
+                        className='mx-auto -mt-20 w-[250px] rounded-full bg-ducky/50 shadow-lg lg:w-[500px]'
                     />
                 </div>
             </div>
 
-            <div className='flex flex-col'>
+            <div className='flex flex-col mx-auto'>
                 <div>
-                    <h1 className='mt-8 text-center font-ducky text-5xl font-bold md:mt-0 md:text-start md:text-7xl lg:text-8xl'>
+                    <h1 className='mt-8 text-center font-ducky text-5xl font-bold lg:mt-0 lg:text-start lg:text-8xl'>
                         About
                     </h1>
-                    <div className='mx-auto hidden h-1 w-[60%] bg-purple-500 md:mx-0 md:block' />
+                    <div className='mx-auto hidden h-1 w-[60%] bg-purple-500 lg:mx-0 lg:block' />
                 </div>
-                <p className='mt-6 max-w-xl text-center text-xl md:text-start lg:text-2xl'>
+                <p className='mt-6 max-w-xl text-center text-xl lg:text-start lg:text-2xl'>
                     Duck Buck's vision is to create a vibrant, engaged community around a cryptocurrency that is both fun and rewarding. Our mission is to redefine the potential of meme coins by integrating unique features such as NFT collectibles, interactive games, and charitable initiatives.
                 </p>
 
@@ -124,16 +124,16 @@ const About = () => {
 // Tokenomics
 const Tokenomics = () => {
     return (
-        <div className='mt-32 flex flex-col items-center justify-center bg-ducky/50 p-4 py-32 md:mt-52 md:gap-8 md:px-56'>
+        <div className='mt-32 flex flex-col items-center justify-center bg-ducky/50 p-4 py-32 lg:mt-52 lg:gap-8 lg:px-56'>
             <Fade direction='down'>
                 <h1 className='font-ducky text-5xl font-bold md:text-7xl lg:text-8xl'>
                     Tokenomics
                 </h1>
             </Fade>
 
-            <div className='mt-12 flex flex-col-reverse items-center gap-12 md:flex-row'>
+            <div className='mt-12 flex flex-col-reverse items-center gap-12 lg:flex-row'>
                 <div>
-                    <h1 className='mx-auto text-center font-ducky text-4xl font-bold md:mx-0 md:text-start md:text-4xl lg:text-5xl'>
+                    <h1 className='mx-auto text-center font-ducky text-4xl font-bold lg:mx-0 lg:text-start md:text-5xl'>
                         Total Supply <br className='md:hidden' />
                         <span className='border-b-8 border-purple-600 bg-gradient-to-r from-purple-300 from-10% to-purple-500 bg-clip-text text-transparent underline underline-offset-4 md:leading-[1.5]'>
                             {' '}
@@ -247,7 +247,7 @@ const Roadmap = () => {
     ]
 
     return (
-        <div className='flex flex-col items-center justify-center gap-8 pt-24 md:mt-52 md:px-56 md:pt-0'>
+        <div className='flex flex-col items-center justify-center gap-8 pt-24 lg:mt-52 lg:px-56 lg:pt-0'>
             <div>
                 <Fade direction='down'>
                     <h1 className='text-center font-ducky text-5xl font-bold md:text-start md:text-7xl lg:text-8xl'>
@@ -261,7 +261,7 @@ const Roadmap = () => {
                 alt='logo'
                 width={512}
                 height={512}
-                className='z-30 -mb-12 -ml-32 w-[200px] rounded-full bg-ducky/50 shadow-lg md:-mb-8 md:ml-0 md:w-[300px]'
+                className='z-30 -mb-12 -ml-32 w-[200px] rounded-full bg-ducky/50 shadow-lg md:-mb-8 md:-ml-[25rem] lg:ml-0 md:w-[300px]'
             />
 
             <div className='h-fit w-[400px] md:mx-auto md:w-[800px]'>

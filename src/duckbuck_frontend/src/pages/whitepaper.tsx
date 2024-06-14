@@ -4,8 +4,8 @@ import MarkdownRenderer from '../components/markdown'
 export default function Page() {
     return (
         <>
-            <section className='bg-ducky min-h-screen md:py-32 lg:px-96'>
-                <div className='mx-4 bg-purple-950 rounded border w-fit mx-auto lg:px-28 border-slate-800 bg-ducky/30 p-4 '>
+            <section className='bg-ducky min-h-screen py-16 md:py-32 lg:px-96'>
+                <div className='mx-4 rounded-lg lg:shadow lg:border-4 lg:border-purple-500 w-fit md:mx-auto lg:px-28 p-4 '>
                     <MarkdownRenderer content={markdown} />
                 </div>
             </section>
