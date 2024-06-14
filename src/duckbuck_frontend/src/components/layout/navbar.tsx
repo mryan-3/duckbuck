@@ -134,12 +134,12 @@ function MobileNav() {
                         >
                             Home
                         </Link>
-                        <Link
-                            to='/#airdrop'
+                        <a
+                            href='/#airdrop'
                             className='hover:bg-primary-50 rounded-md p-2'
                         >
                             AirDrops
-                        </Link>
+                        </a>
                         <Link
                             to='/whitepaper'
                             className='hover:bg-primary-50 rounded-md p-2'
