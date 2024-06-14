@@ -1,59 +1,102 @@
-# `duckbuck`
+# Duck Buck ($DUCK)
 
-Welcome to your new `duckbuck` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Welcome to the official GitHub repository of **Duck Buck ($DUCK)**, a memecoin that's taking the internet by storm! We're thrilled to be participating in the Memethon, and this README will provide you with all the details about our project, how you can get involved, and where to find us on social media.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+## About Duck Buck
 
-To learn more before you start working with `duckbuck`, see the following documentation available online:
+**Duck Buck ($DUCK)** is not just another memecoin; it's a movement. We are leveraging the power of community and the unique capabilities of the Internet Computer (ICP) to create a fun, engaging, and rewarding experience for all our holders.
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
+### The Story of Duck Buck
 
-If you want to start working on your project right away, you might want to try the following commands:
+In the enchanted land of Cryptoville, a humble duck named Quacky dreamed of a world where everyone could enjoy the magic of memes. One day, Quacky discovered the power of blockchain and created Duck Buck ($DUCK) to bring joy and prosperity to the masses. Join Quacky's adventure and be a part of the most exciting memecoin community ever!
 
-```bash
-cd duckbuck/
-dfx help
-dfx canister --help
-```
+## Highlights from Our Whitepaper
 
-## Running the project locally
+### Total Supply
 
-If you want to test your project locally, you can use the following commands:
+1,000,000,000 DUCK tokens will be minted.
 
-```bash
-# Starts the replica, running in the background
-dfx start --background
+### Distribution
 
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
+- **Community and Rewards (40%)**: Allocated for community rewards, staking, and incentives.
+- **Development and Marketing (30%)**: Used for development, marketing, and partnerships.
+- **Founders and Team (15%)**: Reserved for the team, with a vesting period to ensure commitment.
+- **Liquidity (10%)**: Locked in liquidity pools.
+- **Charity (5%)**: Dedicated to charitable causes, focusing on wildlife conservation.
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+### Introduction
 
-If you have made changes to your backend canister, you can generate a new candid interface with
+Welcome to DUCKBUCK, the quackiest meme coin in the crypto pond! Inspired by the irreverent and money-loving Howard the Duck, DUCKBUCK is here to bring a splash of fun and a wave of wealth to the crypto community. Our mission? To create a financial revolution that’s as entertaining as a Saturday morning cartoon and as lucrative as a golden egg-laying duck!
 
-```bash
-npm run generate
-```
+### Detailed Description
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+Duck Buck's vision is to create a vibrant, engaged community around a cryptocurrency that is both fun and rewarding. Our mission is to redefine the potential of meme coins by integrating unique features such as NFT collectibles, interactive games, and charitable initiatives.
 
-If you are making frontend changes, you can start a development server with
+### Features
 
-```bash
-npm start
-```
+- **Community-Driven**: Duck Buck prioritizes transparency, inclusivity, and active engagement with its community.
+- **Charitable Initiatives**: A portion of Duck Buck’s proceeds will be dedicated to wildlife conservation efforts.
+- **NFT Integration**: Unique Duck Buck NFTs will provide collectors with exclusive digital assets.
+- **Gamification**: Interactive games and challenges will keep the community entertained and involved.
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+### Airdrop Mechanism
 
-### Note on frontend environment variables
+The Duck Buck airdrop aims to reward early adopters and active community members, creating a strong foundation of loyal supporters. Here’s how it will work:
 
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
+- **Eligibility**:
+  - Users must hold a minimum amount of a major cryptocurrency (e.g., ETH, BTC, BNB) to be eligible.
+  - Follow Duck Buck on social media platforms (Twitter, Telegram, Discord).
+  - Complete a simple task such as retweeting a specific post or joining the community chat.
 
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+- **Registration**:
+  - Users will sign up on the official Duck Buck website with their wallet address and social media handles.
+  - Verification of task completion through integration with social media APIs.
+
+- **Distribution**:
+  - The airdrop will distribute 200,000,000 DUCK tokens over a period of 3 months.
+  - Tokens will be distributed in three phases: 40% in the first month, 35% in the second month, and 25% in the third month.
+  - Airdrop amounts will vary based on the user's engagement level and task completion.
+
+- **Anti-Sybil Measures**:
+  - Multi-account prevention through KYC (optional) or advanced algorithms to detect and block fake accounts.
+  - Regular audits and community feedback to ensure fair distribution.
+
+- **Bonus Airdrops**:
+  - Additional tokens for users who refer others to the Duck Buck community.
+  - Special bonuses for long-term holders and active participants in governance.
+
+### Roadmap
+
+#### Phase 1: Launch and Initial Growth
+- **Q1 2024**: Token launch and initial distribution.
+- **Q1 2024**: Establish social media presence and community channels.
+- **Q2 2024**: Launch the Duck Buck website and publish whitepaper.
+- **Q2 2024**: Initial coin listing on decentralized exchanges.
+
+#### Phase 2: Expansion and Utility Development
+- **Q3 2024**: Introduce Duck Buck NFTs and marketplace.
+- **Q3 2024**: Partner with meme creators and influencers.
+- **Q4 2024**: Launch first community-driven charitable event.
+
+#### Phase 3: Community and Ecosystem Building
+- **Q1 2025**: Develop and launch the Duck Buck mobile app.
+- **Q2 2025**: Integrate gamification features into the platform.
+- **Q2 2025**: Secure additional exchange listings and trading pairs.
+- **Q3 2025**: Expand charitable partnerships and initiatives.
+
+### Tokenomics
+
+- **Token Name**: Duck Buck
+- **Ticker**: DUCK
+- **Transaction Fees**: A 2% transaction fee will be applied, with 1% redistributed to holders and 1% burned to create deflationary pressure.
+- **Staking Rewards**: Holders can stake their DUCK tokens to earn additional rewards and participate in governance decisions.
+
+## Social Media
+
+Stay updated and join the conversation across our social media platforms:
+- **Website**: [Duck Buck Website](https://y5yya-zqaaa-aaaam-acsea-cai.icp0.io)
+- **WhatsApp**: [Duck Buck WhatsApp](https://whatsapp.com/channel/0029VaiDlQy0QeabrRw5PC1i)
+- **OpenChat**: [Duck Buck OpenChat](https://oc.app/community/o2v7k-oiaaa-aaaar-bhniq-cai/channel/326505419467174551431198504783034942192)
+- **X (Twitter)**: [Duck Buck Twitter](https://x.com/THEDUCKBUCK)
+- **Telegram**: [Duck Buck Telegram](https://t.me/+yn1RoXfbJO0xOGM0)
+
