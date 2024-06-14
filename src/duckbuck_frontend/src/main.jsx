@@ -13,12 +13,14 @@ import RootLayout from "./components/layout/root-layout"
 
 // Pages import
 import App from './App';
+import Whitepaper from './pages/whitepaper';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/'>
             <Route element={<RootLayout />} >
                 <Route index element={<App />} />
+                <Route path="/whitepaper" element={<Whitepaper />} />
             </Route>
 
             <Route path='*' element={<NotFound />} />

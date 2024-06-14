@@ -13,7 +13,7 @@ export default function NavBar() {
     return (
         <>
             <MobileNav />
-            <nav className='fixed top-3 z-50 left-0 right-0 mx-auto mt-2 hidden w-[80%] items-center justify-between rounded-full border-2 border-purple-600/20 bg-purple-900/30 p-2 px-4 backdrop-blur-md md:flex'>
+            <nav className='fixed left-0 right-0 top-3 z-50 mx-auto mt-2 hidden w-[80%] items-center justify-between rounded-full border-2 border-purple-600/20 bg-purple-900/30 p-2 px-4 backdrop-blur-md md:flex'>
                 <Link to='/' className='flex items-center gap-4'>
                     <img
                         src='/duckbuck2.jpg'
@@ -29,7 +29,7 @@ export default function NavBar() {
                     <div className='group/home'>
                         <NavLink
                             to='/'
-                            className='rounded-md p-2 px-3 font-semibold text-sm text-gray-300'
+                            className='rounded-md p-2 px-3 text-sm font-semibold text-gray-300'
                         >
                             Home
                         </NavLink>
@@ -42,12 +42,12 @@ export default function NavBar() {
                     </div>
 
                     <div className='group/about'>
-                        <NavLink
-                            to='/#services'
-                            className='rounded-md p-2 px-3 font-semibold text-sm text-gray-300'
+                        <a
+                            href='/#airdrop'
+                            className='rounded-md p-2 px-3 text-sm font-semibold text-gray-300'
                         >
                             AirDrops
-                        </NavLink>
+                        </a>
                         <div
                             className={cn(
                                 'mx-auto h-0.5 w-10 rounded bg-primary opacity-0 transition-opacity duration-500 group-hover/about:opacity-100',
@@ -58,36 +58,30 @@ export default function NavBar() {
 
                     <div className='group/services'>
                         <NavLink
-                            to='/admin'
-                            className='rounded-md p-2 px-3 font-semibold text-sm text-gray-300'
-                        >
-                            Features
-                        </NavLink>
-
-                        <div className='mx-auto h-0.5 w-10 rounded bg-primary opacity-0 transition-opacity duration-500 group-hover/services:opacity-100' />
-                    </div>
-
-                    <div className='group/services'>
-                        <NavLink
-                            to='/vote'
-                            className='rounded-md p-2 px-3 font-semibold text-sm text-gray-300'
+                            to='/whitepaper'
+                            className='rounded-md p-2 px-3 text-sm font-semibold text-gray-300'
                         >
                             Whitepaper
                         </NavLink>
 
-                        <div className='mx-auto h-0.5 w-10 rounded bg-primary opacity-0 transition-opacity duration-500 group-hover/services:opacity-100' />
+                        <div
+                            className={cn(
+                                'mx-auto h-0.5 w-10 rounded bg-primary opacity-0 transition-opacity duration-500 group-hover/home:opacity-100',
+                                { 'opacity-100': lastPath === 'whitepaper' }
+                            )}
+                        />
                     </div>
                 </div>
                 <div className='flex items-center gap-3'>
                     <a
-                        href='https://twitter.com'
+                        href='https://x.com/THEDUCKBUCK'
                         target='_blank'
                         className='flex items-center justify-center rounded-full bg-purple-900/50 p-2'
                     >
                         <TwitterIcon />
                     </a>
                     <a
-                        href='https://telegram.com'
+                        href=' https://t.me/+yn1RoXfbJO0xOGM0'
                         className='flex items-center justify-center rounded-full bg-purple-900/50 p-2'
                         target='_blank'
                     >
@@ -115,10 +109,15 @@ function MobileNav() {
                     { 'backdrop-blur-0': isOpen }
                 )}
             >
-                <Link to='/' className='flex items-center'>
-                    <h1 className='text-primary-950 text-2xl font-bold'>
-                        DuckBuck
-                    </h1>
+               <Link to='/' className='flex items-center gap-4'>
+                    <img
+                        src='/duckbuck2.jpg'
+                        alt='logo'
+                        width={512}
+                        height={512}
+                        className='w-[60px] rounded-full'
+                    />
+                    <span className='text-xl font-bold'> DuckBuck</span>
                 </Link>
 
                 <button onClick={() => setIsOpen((prev) => !prev)} className=''>
@@ -130,25 +129,19 @@ function MobileNav() {
                 <div className='w-full space-y-6 px-4 pb-6 pt-4 shadow backdrop-blur-lg'>
                     <ul className='flex flex-col items-center justify-center gap-2 text-sm'>
                         <Link
-                            to='#'
+                            to='/'
                             className='hover:bg-primary-50 rounded-md p-2'
                         >
                             Home
                         </Link>
                         <Link
-                            to='#'
+                            to='/#airdrop'
                             className='hover:bg-primary-50 rounded-md p-2'
                         >
                             AirDrops
                         </Link>
                         <Link
-                            to='#'
-                            className='hover:bg-primary-50 rounded-md p-2'
-                        >
-                            Features
-                        </Link>
-                        <Link
-                            to='#'
+                            to='/whitepaper'
                             className='hover:bg-primary-50 rounded-md p-2'
                         >
                             Whitepaper
