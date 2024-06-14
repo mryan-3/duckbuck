@@ -2,7 +2,7 @@ import { PieChart } from 'react-minimal-pie-chart'
 import Footer from './components/layout/footer'
 import DistCard from './components/cards/dist-card'
 import { Chrono } from 'react-chrono-extra'
-import { Fade, Bounce, Slide } from 'react-awesome-reveal'
+import { Fade, Bounce, Rotate } from 'react-awesome-reveal'
 
 function App() {
     return (
@@ -182,39 +182,41 @@ const Tokenomics = () => {
                 </div>
 
                 <div className='mt-8 md:mt-16'>
-                    <div className='flex w-fit flex-col items-center text-white'>
-                        <PieChart
-                            lineWidth={20}
-                            paddingAngle={18}
-                            rounded={true}
-                            labelPosition={112}
-                            className='text-white'
-                            data={[
-                                {
-                                    title: 'Community and Rewards',
-                                    value: 40,
-                                    color: '#6d8bde'
-                                },
-                                {
-                                    title: 'Development and Marketing',
-                                    value: 30,
-                                    color: '#8188dd'
-                                },
-                                {
-                                    title: 'Founders and Team',
-                                    value: 15,
-                                    color: '#9586dc'
-                                },
-                                {
-                                    title: 'Liquidity',
-                                    value: 10,
-                                    color: '#a983da'
-                                },
-                                { title: 'Charity', value: 5, color: '#bd80d9' }
-                            ]}
-                            animate={true}
-                        />
-                    </div>
+                    <Rotate>
+                        <div className='flex w-fit flex-col items-center text-white'>
+                            <PieChart
+                                lineWidth={20}
+                                paddingAngle={18}
+                                rounded={true}
+                                labelPosition={112}
+                                className='text-white'
+                                data={[
+                                    {
+                                        title: 'Community and Rewards',
+                                        value: 40,
+                                        color: '#6d8bde'
+                                    },
+                                    {
+                                        title: 'Development and Marketing',
+                                        value: 30,
+                                        color: '#8188dd'
+                                    },
+                                    {
+                                        title: 'Founders and Team',
+                                        value: 15,
+                                        color: '#9586dc'
+                                    },
+                                    {
+                                        title: 'Liquidity',
+                                        value: 10,
+                                        color: '#a983da'
+                                    },
+                                    { title: 'Charity', value: 5, color: '#bd80d9' }
+                                ]}
+                                animate={true}
+                            />
+                        </div>
+                    </Rotate>
                 </div>
             </div>
         </div>
@@ -295,7 +297,7 @@ const AirdropMech = () => {
             </div>
 
             <div className='pt-8'>
-                <Slide direction='right' duration={500}>
+                <Fade direction='up' duration={500}>
                     <div className='flex flex-col items-center gap-8 md:flex-row'>
                         <div className='flex h-32 w-32 items-center justify-center rounded-full border-2 border-dashed border-purple-600 p-4 text-8xl font-semibold text-purple-500'>
                             1{' '}
@@ -314,9 +316,9 @@ const AirdropMech = () => {
                             </p>
                         </div>
                     </div>
-                </Slide>
+                </Fade>
 
-                <Slide direction='right' duration={500}>
+                <Fade direction='up' duration={500}>
                     <div className='flex flex-col items-center gap-8 pt-8 md:flex-row md:pt-0'>
                         <div className='flex h-32 w-32 items-center justify-center rounded-full bg-purple-500/20 p-4 text-8xl font-semibold text-purple-500'>
                             2
@@ -333,9 +335,9 @@ const AirdropMech = () => {
                             </p>
                         </div>
                     </div>
-                </Slide>
+                </Fade>
 
-                <Slide direction='left' duration={500}>
+                <Fade direction='up' duration={500}>
                     <div className='flex flex-col items-center gap-8 pt-8 md:flex-row md:pt-0'>
                         <div className='flex h-32 w-32 items-center justify-center rounded-full border-2 border-dashed border-purple-600 p-4 text-8xl font-semibold text-purple-500'>
                             3
@@ -354,9 +356,9 @@ const AirdropMech = () => {
                             </p>
                         </div>
                     </div>
-                </Slide>
+                </Fade>
 
-                <Slide direction='right' duration={500}>
+                <Fade direction='up' duration={500}>
                     <div className='flex flex-col items-center gap-8 pt-8 md:flex-row md:pt-0'>
                         <div className='flex h-32 w-32 items-center justify-center rounded-full bg-purple-500/20 p-4 text-8xl font-semibold text-purple-500'>
                             4
@@ -373,9 +375,9 @@ const AirdropMech = () => {
                             </p>
                         </div>
                     </div>
-                </Slide>
+                </Fade>
 
-                <Slide direction='left' duration={500}>
+                <Fade direction='up' duration={500}>
                     <div className='flex flex-col items-center gap-8 pt-8 md:flex-row md:pt-0'>
                         <div className='flex h-32 w-32 items-center justify-center rounded-full border-2 border-dashed border-purple-600 p-4 text-8xl font-semibold text-purple-500'>
                             5
@@ -392,7 +394,7 @@ const AirdropMech = () => {
                             </p>
                         </div>
                     </div>
-                </Slide>
+                </Fade>
             </div>
         </div>
     )
