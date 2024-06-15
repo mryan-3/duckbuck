@@ -3,16 +3,19 @@ import Footer from './components/layout/footer'
 import DistCard from './components/cards/dist-card'
 import { Chrono } from 'react-chrono-extra'
 import { Fade, Bounce, Rotate } from 'react-awesome-reveal'
+import { toast } from 'sonner'
+
 
 function App() {
+
     return (
         <div className='h-screen'>
             <div className='-mt-4 min-h-screen bg-[url(/duckbuck7.jpg)] bg-cover bg-center bg-no-repeat pt-24 md:pt-52 lg:pt-64'>
                 <div className='absolute inset-0 z-20 h-full w-full bg-ducky/60' />
 
                 <section className='relative z-30 mx-auto flex flex-col gap-4 px-4 antialiased lg:mx-20 lg:flex-row-reverse lg:pl-20'>
-                    <div className='lg:-ml-24'>
-                        <h1 className='font-inter z-20 select-none py-8 text-center text-5xl font-bold leading-none md:text-[5rem] lg:text-start lg:text-[4rem] xl:text-[6rem]'>
+                    <div className='lg:-ml-24 xl:-mt-24 2xl:mt-0'>
+                        <h1 className='font-iso z-20 select-none py-8 text-center text-[3rem] leading-none md:text-[5rem] lg:text-start lg:text-[4rem] xl:text-[6rem]'>
                             Sweet{' '}
                             <span className='border-b-8 border-purple-600 bg-gradient-to-r from-purple-300 from-10% to-purple-500 bg-clip-text leading-[1.5] text-transparent underline underline-offset-4'>
                                 Meme
@@ -20,13 +23,13 @@ function App() {
                             with
                             <br className='md:hidden' /> DeFi Utility
                         </h1>
-                        <p className='lg:mx-w-none mx-auto -mt-4 max-w-xl text-center text-xl md:font-semibold lg:mx-0 lg:text-start'>Welcome to DUCKBUCK, the quackiest meme coin in the crypto pond! Inspired by the irreverent and money-loving Howard the Duck, DUCKBUCK is here to bring a splash of fun and a wave of wealth to the crypto community.</p>
+                        <p className='lg:mx-w-none mx-auto -mt-4 max-w-xl text-center text-xl md:font-semibold lg:mx-0 lg:text-start'>Hello from $DUCK, the quackiest meme coin in the crypto pond! Inspired by the irreverent and money-loving Howard the Duck, DUCKBUCK is here to bring a splash of fun and a wave of wealth to the crypto community.</p>
 
 
                         <a
                             target='_blank'
                             href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
-                            className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 font-semibold uppercase hover:bg-ducky/60 lg:mx-0'
+                            className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
                         >
                             Buy $DUCK
                         </a>
@@ -52,14 +55,7 @@ function App() {
                 <Roadmap />
                 <AirdropMech />
 
-                <div className='mt-32 flex flex-col items-center justify-center'>
-                    <a
-                        target='_blank'
-                        href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
-                        className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 font-semibold uppercase hover:bg-ducky/60 lg:mx-0'
-                    >
-                        Buy $DUCK
-                    </a>
+                <div className='mt-8 flex flex-col items-center justify-center'>
 
                     <Bounce>
                         <div className='mt-8 block'>
@@ -100,22 +96,23 @@ const About = () => {
 
             <div className='flex flex-col mx-auto'>
                 <div>
-                    <h1 className='mt-8 text-center font-ducky text-5xl font-bold lg:mt-0 lg:text-start lg:text-8xl'>
-                        About
+                    <h1 className='mt-8 font-iso text-center font-ducky text-5xl lg:mt-0 lg:text-start lg:text-8xl'>
+                        DUCKY ?
                     </h1>
                     <div className='mx-auto hidden h-1 w-[60%] bg-purple-500 lg:mx-0 lg:block' />
                 </div>
                 <p className='mt-6 max-w-xl text-center text-xl lg:text-start lg:text-2xl'>
-                    Duck Buck's vision is to create a vibrant, engaged community around a cryptocurrency that is both fun and rewarding. Our mission is to redefine the potential of meme coins by integrating unique features such as NFT collectibles, interactive games, and charitable initiatives.
-                </p>
+                    Duck Buck's vision is to create a vibrant, engaged community around a cryptocurrency that is both fun and rewarding. Inspired by <b>Howard the Duck</b>, who mastered the rare martial art <b>Quak Fu</b> and could take out a gang of four adult men or grab a hurled knife or spinning nunchaku out of mid-air, we aim to bring that same level of mastery and excitement to the world of crypto.                </p>
 
-                <a
-                    target='_blank'
-                    href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
-                    className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 font-semibold uppercase hover:bg-ducky/60 lg:mx-0'
-                >
-                    Buy $DUCK
-                </a>
+                <div className='flex flex-col gap-3 mx-auto w-fit lg:mx-0'>
+                    <a
+                        target='_blank'
+                        href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
+                        className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 font-semibold uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
+                    >
+                        Get Some $DUCK
+                    </a>
+                </div>
             </div>
         </div>
     )
@@ -126,8 +123,8 @@ const Tokenomics = () => {
     return (
         <div className='mt-32 flex flex-col items-center justify-center bg-ducky/50 p-4 py-32 lg:mt-52 lg:gap-8 lg:px-56'>
             <Fade direction='down'>
-                <h1 className='font-ducky text-5xl font-bold md:text-7xl lg:text-8xl'>
-                    Tokenomics
+                <h1 className='font-iso text-5xl md:text-7xl lg:text-8xl'>
+                    Duckynomics
                 </h1>
             </Fade>
 
@@ -137,7 +134,7 @@ const Tokenomics = () => {
                         Total Supply <br className='md:hidden' />
                         <span className='border-b-8 border-purple-600 bg-gradient-to-r from-purple-300 from-10% to-purple-500 bg-clip-text text-transparent underline underline-offset-4 md:leading-[1.5]'>
                             {' '}
-                            $DUCK 1 Billion
+                            <span className='font-iso'>$DUCK</span> 1 Billion
                         </span>
                     </h1>
                     <div className='mt-16 grid grid-cols-1 gap-4 border-purple-600'>
@@ -250,7 +247,7 @@ const Roadmap = () => {
         <div className='flex flex-col items-center justify-center gap-8 pt-24 lg:mt-52 lg:px-56 lg:pt-0'>
             <div>
                 <Fade direction='down'>
-                    <h1 className='text-center font-ducky text-5xl font-bold md:text-start md:text-7xl lg:text-8xl'>
+                    <h1 className='font-iso text-center font-ducky text-5xl md:text-start md:text-7xl lg:text-8xl'>
                         Ducky's Roadmap
                     </h1>
                 </Fade>
@@ -290,8 +287,11 @@ const AirdropMech = () => {
         <div id='airdrop' className='mt-24 flex flex-col items-center justify-center gap-8 bg-ducky/50 py-32 md:mt-52 md:px-56'>
             <div>
                 <Fade direction='down' duration={500}>
-                    <h1 className='text-center font-ducky text-5xl font-bold md:text-start md:text-7xl lg:text-8xl'>
-                        AirDrop Mechanism
+                    <h1 className='font-iso text-center font-ducky text-5xl md:text-start md:text-7xl lg:text-8xl'>
+                        AirDrop Some {" "}
+                        <span className='border-b-8 border-purple-600 bg-gradient-to-r from-purple-300 from-10% to-purple-500 bg-clip-text text-transparent underline underline-offset-4 md:leading-[1.5]'>
+                            $DUCK
+                        </span>
                     </h1>
                 </Fade>
             </div>
@@ -395,6 +395,18 @@ const AirdropMech = () => {
                         </div>
                     </div>
                 </Fade>
+
+
+            </div>
+
+            <div className='mt-8'>
+                <a
+                    target='_blank'
+                    href={`https://rewards.taskon.xyz/campaign/detail/402475150`}
+                    className='mx-auto mt-4 flex  w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
+                >
+                    Drop Me $DUCK now!
+                </a>
             </div>
         </div>
     )

@@ -18,12 +18,12 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                ducky: ['ABeeZee', 'sans-serif'],
+                iso: ['Rubik Iso', 'sans-serif'],
                 sans: ['Inter', 'sans-serif']
             },
             screens: {
                 xl: '1400px',
-                '2xl': '1600px'
+                '2xl': '1620px'
             },
             colors: {
                 ducky: '#2a0f66',
