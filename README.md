@@ -99,4 +99,4 @@ Stay updated and join the conversation across our social media platforms:
 - **OpenChat**: [Duck Buck OpenChat](https://oc.app/community/o2v7k-oiaaa-aaaar-bhniq-cai/channel/326505419467174551431198504783034942192)
 - **X (Twitter)**: [Duck Buck Twitter](https://x.com/THEDUCKBUCK)
 - **Telegram**: [Duck Buck Telegram](https://t.me/+yn1RoXfbJO0xOGM0)
-- **Pitch Deck**: [Duck $Buck Pitch Deck](https://www.canva.com/design/DAGIe4xu0O4/mo4M-h99HUG8_QDXRK9S6g/)
+- **Pitch Deck**: [Duck $Buck Pitch Deck](https://www.canva.com/design/DAGIe4xu0O4/mo4M-h99HUG8_QDXRK9S6g/edit?utm_content=DAGIe4xu0O4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
