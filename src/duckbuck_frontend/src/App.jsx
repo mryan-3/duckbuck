@@ -3,10 +3,24 @@ import Footer from './components/layout/footer'
 import DistCard from './components/cards/dist-card'
 import { Chrono } from 'react-chrono-extra'
 import { Fade, Bounce, Rotate } from 'react-awesome-reveal'
+import { Files } from 'lucide-react'
 import { toast } from 'sonner'
+import PlugConnect from './lib/connect-plug'
 
 
 function App() {
+
+    const handleCopy = () => {
+        if (!navigator.clipboard) {
+            toast.error('Clipboard not supported Canister ID: phu3j-cyaaa-aaaam-acr3q-cai')
+            return
+        }
+
+        navigator.clipboard.writeText('phu3j-cyaaa-aaaam-acr3q-cai')
+
+        toast.success('Copied to clipboard')
+
+    }
 
     return (
         <div className='h-screen'>
@@ -26,13 +40,21 @@ function App() {
                         <p className='lg:mx-w-none mx-auto -mt-4 max-w-xl text-center text-xl md:font-semibold lg:mx-0 lg:text-start'>Hello from $DUCK, the quackiest meme coin in the crypto pond! Inspired by the irreverent and money-loving Howard the Duck, DUCKBUCK is here to bring a splash of fun and a wave of wealth to the crypto community.</p>
 
 
-                        <a
-                            target='_blank'
-                            href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
-                            className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
-                        >
-                            Buy $DUCK
-                        </a>
+                        <div className='flex flex-col gap-2 md:flex-row'>
+                            <a
+                                target='_blank'
+                                href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
+                                className='mx-auto text-white mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
+                            >
+                                ICP Swap
+                            </a>
+                            <button
+                                onClick={handleCopy}
+                                className='mx-auto mt-4 flex text-purple-500 w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
+                            >
+                                <Files /> Canister ID
+                            </button>
+                        </div>
                     </div>
 
                     <Bounce>
@@ -53,9 +75,18 @@ function App() {
                 <About />
                 <Tokenomics />
                 <Roadmap />
-                <AirdropMech />
 
                 <div className='mt-8 flex flex-col items-center justify-center'>
+
+                    <div className='mt-8'>
+                        <a
+                            target='_blank'
+                            href={`https://rewards.taskon.xyz/campaign/detail/402475150`}
+                            className='mx-auto mt-4 flex  w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
+                        >
+                            Drop Me $DUCK now!
+                        </a>
+                    </div>
 
                     <Bounce>
                         <div className='mt-8 block'>
@@ -105,13 +136,19 @@ const About = () => {
                     Duck Buck's vision is to create a vibrant, engaged community around a cryptocurrency that is both fun and rewarding. Inspired by <b>Howard the Duck</b>, who mastered the rare martial art <b>Quak Fu</b> and could take out a gang of four adult men or grab a hurled knife or spinning nunchaku out of mid-air, we aim to bring that same level of mastery and excitement to the world of crypto.                </p>
 
                 <div className='flex flex-col gap-3 mx-auto w-fit lg:mx-0'>
-                    <a
-                        target='_blank'
-                        href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
-                        className='mx-auto mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 font-semibold uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
+                    <button
+                        onClick={PlugConnect}
+                        className='mx-auto space-x-1 mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 font-semibold uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
                     >
-                        Get Some $DUCK
-                    </a>
+                        <img
+                            src='/plugwallet.webp'
+                            alt='Plug Wallet'
+                            width={50}
+                            height={50}
+                            className='rounded-full'
+                        />
+                        <span>Connect Plug</span>
+                    </button>
                 </div>
             </div>
         </div>

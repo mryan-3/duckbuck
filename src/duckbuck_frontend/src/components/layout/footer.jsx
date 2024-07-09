@@ -2,11 +2,8 @@ import { cn } from '../../lib/utils'
 import { Separator } from '../ui/separator'
 import { Link } from 'react-router-dom'
 
-type TFooterProps = {
-    className?: string
-}
 
-export default function Footer({ className = '' }: TFooterProps) {
+export default function Footer({ className = '' }) {
     return (
         <footer className={cn('max-w-screen relative mt-auto flex flex-col py-12 transition-colors duration-300 md:px-4 lg:px-8 xl:px-64',className)}>
             <Separator orientation='horizontal' className='bg-purple-900' />
@@ -20,7 +17,8 @@ export default function Footer({ className = '' }: TFooterProps) {
                             Home
                         </Link>
                         <a
-                            href='/#airdrop'
+                            target='_blank'
+                            href={`https://rewards.taskon.xyz/campaign/detail/402475150`}
                             className='mb-2 text-xl uppercase decoration-purple-800 underline-offset-4 hover:text-primary hover:underline'
                         >
                             AirDrops
