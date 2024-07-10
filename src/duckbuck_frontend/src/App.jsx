@@ -75,10 +75,11 @@ function App() {
                 <About />
                 <Tokenomics />
                 <Roadmap />
+                <AirdropMech />
 
                 <div className='mt-8 flex flex-col items-center justify-center'>
 
-                    <div className='mt-8'>
+                    <div className='mt-8 hidden'>
                         <a
                             target='_blank'
                             href={`https://rewards.taskon.xyz/campaign/detail/402475150`}
@@ -262,21 +263,26 @@ const Roadmap = () => {
     const items = [
         {
             title: 'Phase1',
-            cardTitle: 'Launch and Initial Growth',
+            cardTitle: 'Concept and Initial Development',
             cardDetailedText:
-                'Token launch and initial distribution.Establish social media presence and community channels.Launch the DuckBuck website and publish whitepaper.Initial coin listing on decentralized exchanges'
+                'Finalize the concept of DuckBuck as a meme and utility coin.Write a concise, detailed white paper outlining the vision, mission, and technical aspects of DuckBuck.'
         },
         {
             title: 'Phase2',
-            cardTitle: 'Expansion and Utility Developement',
+            cardTitle: 'Rapid Development & Pre-launch',
             cardDetailedText:
-                'Introduce Duck Buck NFTs and marketplace.Partner with meme creators and influencers.Launch first community-driven charitable event.'
+                'Develop and test the basic smart contracts for DuckBuck.Finalize the tokenomics, including total supply, distribution, and initial allocation.Launch a website featuring the white paper, roadmap, and links to community platforms.List DuckBuck on decentralized exchanges (DEX).'
         },
         {
             title: 'Phase3',
-            cardTitle: 'Community and Ecosystem Builidng',
+            cardTitle: 'Launch & Immediate Adoption',
             cardDetailedText:
-                'Develop and launch the DuckBuck mobile app. Integrate gamification features into the platform. Secure additional exchange listings and trading pairs. Expand charitable partnerships and initiatives.'
+                'Start a marketing campaign on social media to attract early adopters and generate excitement.Launching of DuckBuck token to the community.Prepare thorough documentation and FAQs for users and merchants.'
+        }, {
+            title: 'Phase4',
+            cardTitle: 'Ecosystem Building and Long-term Growth',
+            cardDetailedText:
+                'Collect feedback from early users and merchants to identify and address any immediate issues.Extend marketing efforts internationally to attract a global audience.'
         }
     ]
 
@@ -344,13 +350,8 @@ const AirdropMech = () => {
                                 Eligibility
                             </h2>
                             <p className='mt-3 max-w-xl text-center md:text-start'>
-                                Users must hold a minimum amount of a major
-                                cryptocurrency (e.g., ETH, BTC, BNB) to be
-                                eligible. Follow DuckBuck on social media
-                                platforms (Twitter, Telegram, Discord). Complete
-                                a simple task such as retweeting a specific post
-                                or joining the community chat.
-                            </p>
+                                Users must follow <b>DuckBuck</b> on social media
+                                platforms (Twitter, Telegram, Openchat). <b>Complete tasks</b> on TaskOn, such as retweeting specific posts, joining community chats, or participating in social media challenges.         </p>
                         </div>
                     </div>
                 </Fade>
@@ -362,13 +363,10 @@ const AirdropMech = () => {
                         </div>
                         <div className='border-b border-purple-900 px-8 py-12'>
                             <h2 className='text-center font-ducky text-lg font-bold md:text-start md:text-xl lg:text-2xl'>
-                                Registration
+                                Distribution
                             </h2>
                             <p className='mt-3 max-w-xl text-center md:text-start'>
-                                Users will sign up on the official DuckBuck
-                                website with their wallet address and social
-                                media handles. Verification of task completion
-                                through integration with social media APIs.
+                                <b>200,000,000 $DUCK </b> tokens will be distributed over 3 months.Tokens will be distributed in three phases. <b>40%</b> of the total airdrop tokens.<b>35%</b> of the total airdrop tokens.<b>25%</b> of the total airdrop tokens.Airdrop amounts will vary based on user engagement and task completion on TaskOn.
                             </p>
                         </div>
                     </div>
@@ -381,53 +379,10 @@ const AirdropMech = () => {
                         </div>
                         <div className='border-b border-purple-900 px-8 py-12'>
                             <h2 className='text-center font-ducky text-lg font-bold md:text-start md:text-xl lg:text-2xl'>
-                                Distribution
-                            </h2>
-                            <p className='mt-3 max-w-xl text-center md:text-start'>
-                                The airdrop will distribute 200,000,000 $DUCK
-                                tokens over a period of 3 months. Tokens will be
-                                distributed in three phases: 40% in the first
-                                month, 35% in the second month, and 25% in the
-                                third month. Airdrop amounts will vary based on
-                                the user's engagement level and task completion.
-                            </p>
-                        </div>
-                    </div>
-                </Fade>
-
-                <Fade direction='up' duration={500}>
-                    <div className='flex flex-col items-center gap-8 pt-8 md:flex-row md:pt-0'>
-                        <div className='flex h-32 w-32 items-center justify-center rounded-full bg-purple-500/20 p-4 text-8xl font-semibold text-purple-500'>
-                            4
-                        </div>
-                        <div className='border-b border-purple-900 px-8 py-12'>
-                            <h2 className='text-center font-ducky text-lg font-bold md:text-start md:text-xl lg:text-2xl'>
-                                Anti-Sybil Measures
-                            </h2>
-                            <p className='mt-3 max-w-xl text-center md:text-start'>
-                                Multi-account prevention through KYC (optional)
-                                or advanced algorithms to detect and block fake
-                                accounts. Regular audits and community feedback
-                                to ensure fair distribution.
-                            </p>
-                        </div>
-                    </div>
-                </Fade>
-
-                <Fade direction='up' duration={500}>
-                    <div className='flex flex-col items-center gap-8 pt-8 md:flex-row md:pt-0'>
-                        <div className='flex h-32 w-32 items-center justify-center rounded-full border-2 border-dashed border-purple-600 p-4 text-8xl font-semibold text-purple-500'>
-                            5
-                        </div>
-                        <div className='border-b border-purple-900 px-8 py-12'>
-                            <h2 className='text-center font-ducky text-lg font-bold md:text-start md:text-xl lg:text-2xl'>
                                 Bonus Airdrops
                             </h2>
                             <p className='mt-3 max-w-xl text-center md:text-start'>
-                                Additional tokens for users who refer others to
-                                the DuckBuck community. Special bonuses for
-                                long-term holders and active participants in
-                                governance.
+                             Additional tokens for users who <b>refer others</b> to the DuckBuck community through TaskOn.<b>Special bonuses</b> for long-term holders and active participants in governance.<b>Extra points</b> for users who are actively involved in community activities and discussions.
                             </p>
                         </div>
                     </div>
