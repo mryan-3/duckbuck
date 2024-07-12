@@ -20,7 +20,7 @@ function App() {
             await navigator.clipboard.writeText('phu3j-cyaaa-aaaam-acr3q-cai');
             toast.success('Copied to clipboard');
         } catch (error) {
-            toast.error(`Failed to copy: ${error.message}. Canister ID: phu3j-cyaaa-aaaam-acr3q-cai`);
+            toast.error(`Failed to copy.Not to worry here is the Canister ID: phu3j-cyaaa-aaaam-acr3q-cai`);
         }
     };
 
