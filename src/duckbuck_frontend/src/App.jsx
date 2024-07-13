@@ -10,17 +10,19 @@ import PlugConnect from './lib/connect-plug'
 
 function App() {
 
-    const handleCopy = () => {
+    const handleCopy = async () => {
         if (!navigator.clipboard) {
-            toast.error('Clipboard not supported Canister ID: phu3j-cyaaa-aaaam-acr3q-cai')
-            return
+            toast.error('Clipboard not supported. Canister ID: phu3j-cyaaa-aaaam-acr3q-cai');
+            return;
         }
 
-        navigator.clipboard.writeText('phu3j-cyaaa-aaaam-acr3q-cai')
-
-        toast.success('Copied to clipboard')
-
-    }
+        try {
+            await navigator.clipboard.writeText('phu3j-cyaaa-aaaam-acr3q-cai');
+            toast.success('Copied to clipboard');
+        } catch (error) {
+            toast.error(`Failed to copy: ${error.message}. Canister ID: phu3j-cyaaa-aaaam-acr3q-cai`);
+        }
+    };
 
     return (
         <div className='h-screen'>
@@ -382,7 +384,7 @@ const AirdropMech = () => {
                                 Bonus Airdrops
                             </h2>
                             <p className='mt-3 max-w-xl text-center md:text-start'>
-                             Additional tokens for users who <b>refer others</b> to the DuckBuck community through TaskOn.<b>Special bonuses</b> for long-term holders and active participants in governance.<b>Extra points</b> for users who are actively involved in community activities and discussions.
+                                Additional tokens for users who <b>refer others</b> to the DuckBuck community through TaskOn.<b>Special bonuses</b> for long-term holders and active participants in governance.<b>Extra points</b> for users who are actively involved in community activities and discussions.
                             </p>
                         </div>
                     </div>
