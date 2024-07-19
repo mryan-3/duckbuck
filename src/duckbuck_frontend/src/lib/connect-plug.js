@@ -10,13 +10,13 @@ const PlugConnect = async () => {
 
 			const connected = await plug.requestConnect({
 				whitelist: [
-					'phu3j-cyaaa-aaaam-acr3q-cai',
+					'jklxs-eyaaa-aaaam-ac25a-cai',
 					'y5yya-zqaaa-aaaam-acsea-cai'
 				]
 			})
 
 			// Frontend canister ID = y5yya-zqaaa-aaaam-acsea-cai
-			// Token canister ID = phu3j-cyaaa-aaaam-acr3q-cai
+			// Token canister ID = jklxs-eyaaa-aaaam-ac25a-cai
 
 			if (connected) {
 				toast.success('Plug wallet connected successfully')

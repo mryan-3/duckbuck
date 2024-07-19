@@ -12,15 +12,15 @@ function App() {
 
     const handleCopy = async () => {
         if (!navigator.clipboard) {
-            toast.error('Clipboard not supported. Canister ID: phu3j-cyaaa-aaaam-acr3q-cai');
+            toast.error('Clipboard not supported. Canister ID: jklxs-eyaaa-aaaam-ac25a-cai');
             return;
         }
 
         try {
-            await navigator.clipboard.writeText('phu3j-cyaaa-aaaam-acr3q-cai');
+            await navigator.clipboard.writeText('jklxs-eyaaa-aaaam-ac25a-cai');
             toast.success('Copied to clipboard');
         } catch (error) {
-            toast.error(`Failed to copy.Not to worry here is the Canister ID: phu3j-cyaaa-aaaam-acr3q-cai`);
+            toast.error(`Failed to copy.Not to worry here is the Canister ID: jklxs-eyaaa-aaaam-ac25a-cai`);
         }
     };
 
@@ -45,7 +45,7 @@ function App() {
                         <div className='flex flex-col gap-2 md:flex-row'>
                             <a
                                 target='_blank'
-                                href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=phu3j-cyaaa-aaaam-acr3q-cai`}
+                                href={`https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=jklxs-eyaaa-aaaam-ac25a-cai`}
                                 className='mx-auto text-white mt-4 flex w-fit cursor-pointer items-center gap-1 rounded-full border-4 border-purple-800 bg-ducky p-4 px-12 uppercase hover:bg-ducky/60 lg:mx-0 font-iso text-2xl'
                             >
                                 ICP Swap
@@ -178,38 +178,40 @@ const Tokenomics = () => {
                         </span>
                     </h1>
                     <div className='mt-16 grid grid-cols-1 gap-4 border-purple-600'>
-                        <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl'>
                             <DistCard
-                                title='Community and Rewards'
-                                body='40%'
-                                extra='Allocated for community rewards, staking, and incentives'
+                                title='Liquidity Pool (450 Million)'
+                                body='45%'
+                                extra='To provide liquidity on decentralized exchanges (DEX).'
                                 color='#6d8bde'
                             />
-                            <div className='flex flex-col gap-4'>
-                                <DistCard
-                                    title='Development and Marketing'
-                                    body='30%'
-                                    extra='Used for development, marketing and partnerships'
-                                    color='#8188dd'
-                                />
-                                <DistCard
-                                    title='Founders and Team'
-                                    body='15%'
-                                    extra='With vesting period to ensure long-term commitment'
-                                    color='#9586dc'
-                                />
-                            </div>
-                        </div>
-
-                        <div className='grid grid-cols-2 gap-4'>
                             <DistCard
-                                title='Liquidity'
+                                title='Community Airdrop (250 Million)'
+                                body='25%'
+                                extra='Distributed to users who complete simple tasks (e.g., joining social media channels, sharing posts).'
+                                color='#8188dd'
+                            />
+                            <DistCard
+                                title='Development Fund (100 Million)'
                                 body='10%'
-                                extra='Locked in liquidity pool to ensure stability and security'
+                                extra='For ongoing development, marketing, and ecosystem growth.Locked for 1 year with gradual release over 3 years.'
+                                color='#9586dc'
+                            />
+
+                            <DistCard
+                                title='Marketing Fund (100 Million)'
+                                body='10%'
+                                extra='For promotional activities, partnerships, and influencer collaborations.'
+                                color='#6d8bde'
+                            />
+                            <DistCard
+                                title='Team Allocation (50 Million)'
+                                body='5%'
+                                extra='To reward the founding team.Locked for 2 years with gradual release over 4 years.'
                                 color='#a983da'
                             />
                             <DistCard
-                                title='Charity and Donations'
+                                title='Charity and Donations (50 Million)'
                                 body='5%'
                                 extra='Designated for charitable causes (wildlife conservation)'
                                 color='#bd80d9'
@@ -229,26 +231,31 @@ const Tokenomics = () => {
                                 className='text-white'
                                 data={[
                                     {
-                                        title: 'Community and Rewards',
-                                        value: 40,
+                                        title: 'Liquidity Pool (450 Million)',
+                                        value: 45,
                                         color: '#6d8bde'
                                     },
                                     {
-                                        title: 'Development and Marketing',
-                                        value: 30,
+                                        title: 'Community Airdrop (250 Million)',
+                                        value: 25,
                                         color: '#8188dd'
                                     },
                                     {
-                                        title: 'Founders and Team',
-                                        value: 15,
+                                        title: 'Development Fund (100 Million)',
+                                        value: 10,
                                         color: '#9586dc'
                                     },
                                     {
-                                        title: 'Liquidity',
+                                        title: 'Marketing Fund (100 Million)',
                                         value: 10,
                                         color: '#a983da'
                                     },
-                                    { title: 'Charity', value: 5, color: '#bd80d9' }
+                                    {
+                                        title: 'Team Allocation (50 Million)',
+                                        value: 5,
+                                        color: '#a983da'
+                                    },
+                                    { title: 'Charity and Donations (50 Million)', value: 5, color: '#bd80d9' }
                                 ]}
                                 animate={true}
                             />
