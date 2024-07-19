@@ -15,39 +15,28 @@ export default function Page() {
 }
 
 const markdown = `
-# DUCKBUCK ($DUCK)
+# $DUCK
 
 ## Introduction
 
 Welcome to DUCKBUCK, the quackiest meme coin in the crypto pond! Inspired by the irreverent and money-loving Howard the Duck, DUCKBUCK is here to bring a splash of fun and a wave of wealth to the crypto community. Our mission? To create a financial revolution that’s as entertaining as a Saturday morning cartoon and as lucrative as a golden egg-laying duck!
 
-## Detailed Description
-
-Duck Buck's vision is to create a vibrant, engaged community around a cryptocurrency that is both fun and rewarding. Our mission is to redefine the potential of meme coins by integrating unique features such as NFT collectibles, interactive games, and charitable initiatives.
-
 ## Features
 
 - **Community-Driven**: Duck Buck prioritizes transparency, inclusivity, and active engagement with its community.
 - **Charitable Initiatives**: A portion of Duck Buck’s proceeds will be dedicated to wildlife conservation efforts.
-- **NFT Integration**: Unique Duck Buck NFTs will provide collectors with exclusive digital assets.
 - **Gamification**: Interactive games and challenges will keep the community entertained and involved.
 
 ## Airdrop Mechanism
 
 The DuckBuck airdrop aims to reward early adopters and active community members, creating a strong foundation of loyal supporters. Here’s how it will work:
 
-### Eligibility
-- Users must hold a minimum amount of a major cryptocurrency (e.g., ETH, BTC, BNB) to be eligible.
-- Follow DuckBuck on social media platforms (Twitter, Telegram, Discord).
-- Complete a simple task such as retweeting a specific post or joining the community chat.
-
 ### Registration
 - Users will sign up on the official DuckBuck website with their wallet address and social media handles.
 - Verification of task completion through integration with social media APIs.
 
 ### Distribution
-- The airdrop will distribute 200,000,000 $DUCK tokens over a period of 3 months.
-- Tokens will be distributed in three phases: 40% in the first month, 35% in the second month, and 25% in the third month.
+- The airdrop will distribute 250,000,000 $DUCK tokens
 - Airdrop amounts will vary based on the user's engagement level and task completion.
 
 ### Anti-Sybil Measures
@@ -80,15 +69,25 @@ The DuckBuck airdrop aims to reward early adopters and active community members,
 ## Tokenomics
 
 - **Token Name**: DuckBuck
-- **Ticker**: DBUCK
+- **Ticker**: $DUCK
 - **Total Supply**: 1,000,000,000 $DUCK tokens will be minted.
 
 ### Distribution
-- **Community and Rewards (40%)**: Allocated for community rewards, staking, and incentives.
-- **Development and Marketing (30%)**: Used for development, marketing, and partnerships.
-- **Founders and Team (15%)**: Reserved for the team, with a vesting period to ensure commitment.
-- **Liquidity (10%)**: Locked in liquidity pools.
-- **Charity (5%)**: Dedicated to charitable causes, focusing on wildlife conservation.
+-   **Community Airdrop**: 25% (250 Million)
+    -   To create initial buzz and widespread adoption.
+    -   Distributed to users who complete simple tasks (e.g., joining social media channels, sharing posts).
+-   **Liquidity Pool**: 45% (450 Million)
+    -   To provide liquidity on decentralized exchanges (DEX).
+-   **Development Fund**: 10% (100 Million)
+    -   For ongoing development, marketing, and ecosystem growth.
+    -   Locked for 1 year with gradual release over 3 years.
+-   **Marketing Fund**: 10% (100 Million)
+    -   For promotional activities, partnerships, and influencer collaborations.
+-   **Team Allocation**: 5% (50 Million)
+    -   To reward the founding team.
+    -   Locked for 2 years with gradual release over 4 years.
+-   **Charity Fund**: 5% (50 Million)
+    -   To support charitable causes and increase positive public perception.
 
 ## Key Mechanics
 
@@ -97,5 +96,4 @@ The DuckBuck airdrop aims to reward early adopters and active community members,
 
 ## Conclusion
 
-Duck Buck is more than just a meme coin; it is a movement towards a more engaging and fun cryptocurrency landscape. By combining the playful nature of internet culture with robust blockchain technology, Duck Buck aims to build a strong community and make a meaningful impact. Join us on this quacking adventure and be part of the Duck Buck revolution!
-`
+Duck Buck is more than just a meme coin; it is a movement towards a more engaging and fun cryptocurrency landscape. By combining the playful nature of internet culture with robust blockchain technology, Duck Buck aims to build a strong community and make a meaningful impact. Join us on this quacking adventure and be part of the Duck Buck revolution!`
